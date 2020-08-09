@@ -7,6 +7,9 @@ node 'localhost.localdomain' {
     content => "Welcome to ${fqdn}\n",
   }
 }
+node 'mintest.puppet.vm' {
+  include role::minecraft_server
+}
 node /^web/ {
   include role::app_server
 }
